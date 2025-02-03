@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jYB-IX-IDE">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="isansbold.ttf">
+            <string>IRANSansMobileFaNum-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Shop Main View Controller-->
+        <scene sceneID="BjK-gl-KEb">
+            <objects>
+                <viewController id="dZF-2l-x2f" customClass="ShopMainViewController" customModule="Cario" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U6w-l9-U9Q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="بـه زودی" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00g-Qx-OeP">
+                                <rect key="frame" x="158" y="420" width="59" height="27"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Bold" family="IRANSansMobile(FaNum)" pointSize="17"/>
+                                <color key="textColor" red="0.59443551299999997" green="0.68460369109999997" blue="0.81177717449999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mmw-VD-pgF">
+                                <rect key="frame" x="87.5" y="188" width="200" height="200"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="2DH-Yb-hP3"/>
+                                    <constraint firstAttribute="height" constant="200" id="boW-PI-5U6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.14234969019999999" green="0.1914578676" blue="0.24314269420000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Mmw-VD-pgF" firstAttribute="centerX" secondItem="U6w-l9-U9Q" secondAttribute="centerX" id="B24-o4-X2X"/>
+                            <constraint firstItem="00g-Qx-OeP" firstAttribute="centerY" secondItem="U6w-l9-U9Q" secondAttribute="centerY" constant="100" id="Ovc-nb-91R"/>
+                            <constraint firstItem="00g-Qx-OeP" firstAttribute="top" secondItem="Mmw-VD-pgF" secondAttribute="bottom" constant="32" id="Xnb-vp-xp9"/>
+                            <constraint firstItem="00g-Qx-OeP" firstAttribute="centerX" secondItem="U6w-l9-U9Q" secondAttribute="centerX" id="jNy-SH-deK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="R7Q-Ek-DZZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dZO-es-nAS"/>
+                    <connections>
+                        <outlet property="lottieView" destination="Mmw-VD-pgF" id="Oaa-CW-UEe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qaf-Uh-SEz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-736.79999999999995" y="-19.340329835082461"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qMb-Na-0Kz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jYB-IX-IDE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="bottom_nav_shop" id="04x-h0-9tn"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oHW-xk-shv">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.1937078834" green="0.25790619850000002" blue="0.32549732920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dZF-2l-x2f" kind="relationship" relationship="rootViewController" id="bZu-Rm-d0k"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sCn-wS-Ce0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1676" y="-19.340329835082461"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bottom_nav_shop" width="26" height="26"/>
+    </resources>
+</document>
